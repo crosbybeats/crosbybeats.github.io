@@ -26,7 +26,7 @@ function greet() {
         return;
     }
 
-    greetParagraph.innerHTML = "Greetings" + age + "year old" + fname+"!";
+    greetParagraph.innerHTML = "Greetings " + age + " year old " + fname+"!";
 }
 
 //game
@@ -38,17 +38,17 @@ let tunaSelected = document.getElementById("tuna").checked;
 let honeySelected = document.getElementById("honey").checked;
 
 if(chocSelected) {
-    triviaAnswer.innerHTML = fname + "you are wrong";
+    triviaAnswer.innerHTML = fname + " you are wrong";
 }
 
 else if(tunaSelected) {
-    triviaAnswer.innerHTML = fname + "wronggg";
+    triviaAnswer.innerHTML = fname + " wronggg";
 }
 else if(honeySelected) {
-    triviaAnswer.innerHTML = fname + "correct!";
+    triviaAnswer.innerHTML = fname + " correct!";
 }
 else {
-    triviaAnswer.innerHTML = "something went wrong";
+    triviaAnswer.innerHTML = " something went wrong";
 }
 
 }
@@ -63,17 +63,17 @@ let true1Selected = document.getElementById("green").checked;
 let true2Selected = document.getElementById("cars").checked;
 
 if(lieSelected) {
-    lieAnswer.innerHTML = fname + "you are right!";
+    lieAnswer.innerHTML = fname + " you are right!";
 }
 
 else if(true1Selected) {
-    lieAnswer.innerHTML = fname + "wrong!";
+    lieAnswer.innerHTML = fname + " wrong!";
 }
 else if(true2Selected) {
-    lieAnswer.innerHTML = fname + "nope nope";
+    lieAnswer.innerHTML = fname + " nope nope";
 }
 else {
-    lieAnswer.innerHTML = "something went wrong";
+    lieAnswer.innerHTML = " something went wrong";
 }
 
 }
