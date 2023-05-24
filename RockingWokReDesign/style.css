@@ -105,12 +105,13 @@
 
   .navbar .menu-items {
   padding-top: 120px;
+  text-shadow: 4px 2px #000000;
   height: 100vh;
   width: 100%;
-  transform: translate(-160%);
+  transform: translate(-200%);
   display: flex;
   flex-direction: column;
-  margin-left: -60px;
+  margin-left: -120px;
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: left;
@@ -146,5 +147,13 @@
   border: 5px solid gold
  }
 
+ .carousel-container2 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
 
-
+}
