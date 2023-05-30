@@ -8,8 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Bootstrap Test</title>
+    <style>
+      :root {
+  --bckgrnd: #ffffffe0;
+  --primary: #000000;
+  --secondary: #86754D;
+  color: var(--primary);
+}
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ilt8oox.css">
+    <title>Rocking Wok</title>
        
 
 </head>
@@ -26,7 +35,7 @@
         <div class="menu-items">
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </div>
       </div>
     </div>
@@ -44,31 +53,19 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div style="height: 100vh; overflow-y: hidden;">
-                        <img src="images/dishes1.avif" alt="Dishes" class="d-block w-100">
+                        <img src="images/hotpot1.avif" alt="Dishes" class="d-block w-100">
                     </div>
-                    <div class="carousel-caption">
-                        <h3>Dishes</h3>
-                        <p></p>
-                    </div>
-                </div>
+                                    </div>
                 <div class="carousel-item">
                     <div style="height: 100vh; overflow-y: hidden;">
-                        <img src="images/cakes1.avif" alt="Cakes" class="d-block w-100">
+                        <img src="images/chicken1.jpg" alt="Cakes" class="d-block w-100">
                     </div>
-                    <div class="carousel-caption">
-                        <h3>Cakes</h3>
-                        <p></p>
-                    </div>
-                </div>
+                                    </div>
                        <div class="carousel-item">
                         <div style="height: 100vh; overflow-y: hidden;">
-                    <img src="images/hotpot1.avif" alt="Rehearsal" class="d-block w-100">
+                    <img src="images/dishes1.avif" alt="Rehearsal" class="d-block w-100">
                     </div>
-                    <div class="carousel-caption">
-                        <h3>HotPot</h3>
-                        <p></p>
-                    </div>
-                </div>
+                                    </div>
             </div>
 
                       <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
@@ -80,47 +77,112 @@
         </div>
     </div>
     <div class="carousel-container2">
-        <h1 style="text-decoration: underline; text-align: center; font-size: 100px; letter-spacing: 5px; text-shadow: 4px 2px #000000;">Rocking Wok</h1>
+        <h1 style="font-family: 'roboto-slab', serif;
+        font-weight: 700; font-style: normal; text-decoration: underline; text-align: center; font-size: 100px; letter-spacing: 7px; text-shadow: 6px 2px #000000;">Rocking Wok</h1>
     </div>
     <br>
-    <div style="z-index:150; position:relative; top: 20px;">
-<!!old rckingwk!!>
-</div>
+    <br>
+<br>
+<h2 style="text-align: center; text-decoration: rgb(207, 198, 149); font-family: 'roboto-slab', serif;
+font-weight: 750; font-style: normal; font-size: 40px;">Featured Menu Items:</h2>
 <br>
 <br>
-<h2 style="text-align: center; text-decoration: rgb(207, 198, 149);">Menu:</h2>
-<br>
-<br>
-<div class="container">
+<div class="featurecontainer">
     <div class="row" style="text-align: center;">
       <div class="col-sm">
-        Featured item 1
+        Three Cup Chicken
         <br>
         <br>
-        <img src="images/chicken1.jpg" alt="chicken" class="feature1" style=" width: 300px;">
+       <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216853698145a216c#group_3777422" target="_blank"><img src="images/chicken1.jpg" alt="chicken" class="feature1" style=" width: 320px; height: 218px;"></a> 
         </div>
       <div class="col-sm">
-        Featured item 2
+        Hot and Sour Soup
         <br>
         <br>
-        <img src="images/bowl4.avif" alt="bowl" class="feature1" style=" width: 300px;">
+        <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216853743305a216c#group_3777427" target="_blank"><img src="images/bowl4.avif" alt="bowl" class="feature1" style=" width: 320px;"></a>
       </div>
       <div class="col-sm">
-        Featured item 3
+        Sauteed Pork with Garlic Sauce
         <br>
         <br>
-        <img src="images/bowl5.avif" alt="chicken" class="feature1" style=" width: 300px;">
+        <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216853749775a216c#group_3777424" target="_blank"><img src="images/bowl5.avif" alt="chicken" class="feature1" style=" width: 320px;"></a>
       </div>
     </div>
   </div>
-   
-   
-</body>
-<script>
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    })
+  <br>
+  <br>
+    <hr style="border: solid var(--primary) 1.5px;">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 style="text-align: center; font-family: 'roboto-slab', serif;
+  font-weight: 700; font-style: normal; color: #000000; font-size: 40px; text-decoration: underline;">About Us:</h3>
+  <br>
+  <p style="text-align: center; font-family: 'roboto-slab', serif;
+  font-weight: 300; font-size: 25px; font-style: normal; color: var(--secondary); padding-left: 120px; padding-right: 120px; letter-spacing: 2px;" >Rocking Wok Taiwanese Cuisine offers delicious dining and takeout to Seattle, WA. <br>
+  <br>
+
+    Rocking Wok Taiwanese Cuisine is a cornerstone in the Seattle community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff. <br> <br>
+    
+    Our Chinese restaurant is known for its modern interpretation of classic dishes and its insistence on only using high quality fresh ingredients.</p>
+  <br>
+  <hr style="border: solid 2px;">
+  <br>
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container" id="contact-form">
+      <h1 style="text-align: center;">Reservation</h1>
   
+      <label for="Name"><b></b></label>
+      <input type="text" placeholder="First and Last Name" name="user_name" required>
+  <div style="padding-left: 23px;">
+      <label for="num"><b></b></label>
+      <input type="email" placeholder="email" name="user_email" required>
+      <br>
+      <br>
+      <input type="datetime-local" placeholder="" name="Message" required>
+  </div>
+  <br>
+      <button type="submit" class="btn" value="Send" onclick="closeForm()">Reserve <input type="submit" type="hidden" style="z-index: -100; display: none;"></button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  
+  </p>
+  <div class="footer" style="grid-column: 1 / -1;">
+    <div class="footer-text">
+        <p>Webpage Made By: <a style="color: white; text-decoration: underline;" href="mailto:ocrosby@eastsideprep.org" class="creator">Oliver Crosby</a> | <a style="color: white;  text-decoration: underline;" href="#top">Scroll To Top</a> | <a style="color: white;  text-decoration: underline;"onclick="openForm()">Make a Reservation</a></p>
+    </div>
+      </div>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('LEr927cO4MzDrcDRi');
+        })();
     </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+               
+                this.contact_number.value = Math.random() * 100000 | 0;
+                
+                emailjs.sendForm('service_mmlxybh', 'template_ryz4h6c', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</body>
 </html>

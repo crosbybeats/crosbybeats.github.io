@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,183 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ilt8oox.css">
+    <style>
+      
+      .pic-container {
+    max-width: 210px;
+    max-height: 210px;
+    margin: 50px;     
+}
+
+:root {
+  --bckgrnd: #ffffffe0;
+  --primary: #000000;
+  --secondary: #86754D;
+  color: var(--primary);
+}
+
+.pic {
+    background: #fff;
+    position: absolute;
+    transition: all 0.2s ease;
+   }
+
+.pic:nth-child(1) {
+    z-index: 3;
+}
+
+.pic:nth-child(2) {
+    z-index: 1;
+}
+
+.pic:nth-child(3) {
+    z-index: 2;
+}
+
+.pic-container:hover .pic:nth-child(1) {
+    transform: rotate(15deg);
+    transition: all 0.5s ease;
+}
+
+.pic-container:hover .pic:nth-child(2) {
+    transform: rotate(7deg);
+    transition: all 0.10s ease;
+}
+
+.pic-container:hover .pic:nth-child(3) {
+    transform: rotate(-5deg);
+}
+
+.pic-container:hover {
+    left:230px;
+    opacity: 1;
+}
+
+    </style>
     <title>Menu</title>
-   
+       
+
 </head>
 <body>
+<nav>
+    <div class="navbar" style="z-index: 5; position: fixed;">
+      <div class="container nav-container">
+          <input class="checkbox" type="checkbox"/>
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>  
+        <div class="menu-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <h1 style="text-align: center; font-size: 80px; font-weight: bold; letter-spacing: 6px;">Menu</h1>
+
+  <div class="gallery">
+
+    <p style="position: relative; left: -560px; top: -690px; z-index: 100; color: #fff; font-size: 25px; text-shadow: 2px 2px #000000;">Main Dishes</p>
+   
+    <figure class="gallery__item gallery__item--1" 
+    style="position: relative;
+    left: -50px;
+    top: 20px;">
+      <div>
+        <div class="pic-container">
+          <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854320025a216c#group_3777421" target=”_blank”><img src="images/bowl3.avif" class="pic" style="width: 310px;"/></a>
+          <img src="images/bowl2.avif" class="pic" style="width: 260px;"/>
+          <img src="images/bowl1.jpg" class="pic" style="width: 250px;"/>
+        </div>
+        <div class="overlay">Main Dishes</div>
+      </div>
+    </figure>
+    <figure class="gallery__item gallery__item--2">
+      <div class="container2">
+      <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854321585a216c#group_3777418" target=”_blank”><img src="images/potsticker1.jpg" class="gallery__img" alt="Fried Foods"></a>
+      <div class="overlay">Fried Foods</div></div>
+    </figure>
+    <figure class="gallery__item gallery__item--3">
+      <div class="container2">
+      <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854322155a216c#group_3777423" target=”_blank”><img src="images/rawmeat1.avif" class="gallery__img" alt="Beef"></a>
+      <div class="overlay">Beef</div></div>
+    </figure>
+    <figure class="gallery__item gallery__item--4">
+      <div class="container2">
+      <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854322365a216c#group_3777427" target=”_blank”><img src="images/bowl4.avif" class="gallery__img" alt="Bowls - soups"></a>
+      <div class="overlay">Soups</div></div>
+    </figure>
+    <figure class="gallery__item gallery__item--5">
+      <div class="container2">
+      <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854322535a216c#group_3777422" target=”_blank”><img src="images/chicken1.jpg" class="gallery__img" alt="Chicken"></a>
+      <div class="overlay">Chicken</div></div>
+    </figure>
+    <figure class="gallery__item gallery__item--6">
+      <div class="container2">
+      <a href="https://www.beyondmenu.com/47671/seattle/rocking-wok-taiwanese-cuisine-seattle-98103.aspx?utm_source=satellite&utm_medium=menu_group&pk_vid=e29e888c5952cf6216854322725a216c#group_3777428" target=”_blank”><img src="images/cakes1.avif" class="gallery__img" alt="Cakes"></a>
+      <div class="overlay">Cakes and Deserts</div></div>
+    </figure>
+    </div>
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container" id="contact-form">
+        <h1 style="text-align: center;">Reservation</h1>
     
+        <label for="Name"><b></b></label>
+        <input type="text" placeholder="First and Last Name" name="user_name" required>
+    <div style="padding-left: 23px;">
+        <label for="num"><b></b></label>
+        <input type="email" placeholder="email" name="user_email" required>
+        <br>
+        <br>
+        <input type="datetime-local" placeholder="" name="Message" required>
+    </div>
+    <br>
+        <button type="submit" class="btn" value="Send" onclick="closeForm()">Reserve <input type="submit" type="hidden" style="z-index: -100; display: none;"></button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    
+    </p>
+
+    <div class="footer" style="grid-column: 1 / -1;">
+      <div class="footer-text">
+          <p>Webpage Made By: <a style="color: white; text-decoration: underline;" href="mailto:ocrosby@eastsideprep.org" class="creator">Oliver Crosby</a> | <a style="color: white;  text-decoration: underline;" href="#top">Scroll To Top</a> | <a style="color: white;  text-decoration: underline;"onclick="openForm()">Make a Reservation</a></p>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('LEr927cO4MzDrcDRi');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                this.contact_number.value = Math.random() * 100000 | 0;
+                
+                emailjs.sendForm('service_mmlxybh', 'template_ryz4h6c', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
