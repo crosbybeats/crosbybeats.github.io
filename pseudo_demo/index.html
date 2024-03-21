@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crosby pseudo demo</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Welcome to Web 2!</h1>
+        <h4>Today we will mess with pseudo classes and elements</h4>
+
+        <h2>Lets first experiment with some dope CSSSS</h2>
+        <p>If we think CSS in terms of selectors, properties, and values, then a typical CSS entry would look like this:</p>
+
+        <pre>
+            <code>
+                selector {property: value; }
+            </code>
+        </pre>
+        <p>To style the above, we need to add two tags together. We call this CSS Combinators</p>
+
+        <h2>What are pseudo classes</h2>
+        <p>Again, if we think of CSS in terms of selectors, properties, and values, then pseudo class is an add-on to a selector</p>
+        <p>A typical CSS entry calling on a pseudo class would loo like this:</p>
+
+        <pre>
+            <code>selector:pseudo_class {property: value:}</code>
+        </pre>
+        <h4>We use Pseudo Class for links</h4>
+        <p>If we want our <a href="http://">link</a> to look diferent, we can simply add it in my css as follows:</p>
+        <pre>
+            <code>
+                a {color: red;}
+            </code>
+        </pre>
+        <p>
+            if we want our <a href="http://">link states</a> to look different then we will use a psuedo class like:
+        </p>
+        <ul>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+            </ul>
+        <p>but we can also make a <a class="special" href="http://">new link</a> look different.</p>
+<h4>We can even call on specific selectors depending on their hierarchy.</h4>
+<div id="first">
+    <p> This text will change    </p>
+    <p>This will look different toooo</p>
+</div>
+
+<h2>What are pseudo elements?</h2>
+<p id="pseudo-elements">Again, if we think of pseudo classes as add-ons, then we can think of pseudo elemtns as creating new elements from a selector</p>
+
+<h4 id="pseudo-elements2">This thing is going wild</h4>
+<h2>Have you ever seen a link like this before:</h2>
+<p><a class="yo" href="https://">I am a very swag link</a></p>
+    </div>
+    
+</body>
+</html>
