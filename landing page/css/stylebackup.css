@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('https://www.tripsavvy.com/thmb/PBI52SCfjOwt5Vvy--4Wxc9NFys=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/DSC_011-5c64559546e0fb00017dd8f8.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 105%;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.4s;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #555;
+    transform: translate(0, -5px);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
