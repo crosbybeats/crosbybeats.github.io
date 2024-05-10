@@ -282,7 +282,7 @@ nav {
 
         flex-direction: column;
         align-items: center;
-        
+
     }
 
     .about-us {
@@ -291,5 +291,9 @@ nav {
     }
 }
 
-
+@media (max-width: 768px) {
+    .nash img {
+        display: none;
+    }
+}
 
