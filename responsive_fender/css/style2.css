@@ -30,6 +30,22 @@ h1, h2, h3, p, a {
  
 }
 
+ /* acting uppp
+@media (max-width: 768px) {
+.bigname {
+    float: right;
+}
+}
+ */
+
+ @media (max-width: 768px) {
+    .bigname h1 {
+        text-align: center;
+        width: 100%;
+
+    }
+}
+
 
 
 nav {
@@ -288,6 +304,7 @@ nav {
     .about-us {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 }
 
