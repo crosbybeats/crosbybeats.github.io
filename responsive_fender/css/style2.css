@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+
+}
+
+h1, h2, h3, p, a {
+    font-size: 1rem;
+}
+
+.nav {
+    background-color: rgb(27, 27, 27);
+    color: antiquewhite;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+ 
+}
+
+
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+
+    padding: 20px;
+    gap: 20px;
+}
+
+.header {
+
+
+    text-align: center;
+    padding: 20px;
+
+    width: 100%;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.side-nav, .main, .right {
+
+    padding: 15px;
+
+    margin-top: 10px;
+}
+
+
+
+.main {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+
+.right {
+    flex: 1;
+    background-color: darkgoldenrod;
+
+    color: antiquewhite;
+
+}
+
+.footer {
+    background-color: darkgrey;
+    color: white;
+    padding: 10px;
+
+    text-align: center;
+    width: 100%;
+
+
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.guitar-image {
+    margin-bottom: 20px;
+
+
+    text-align: center; 
+}
+
+ /* testing this idea from online: */
+
+.guitar-image:nth-of-type(2), .guitar-image:nth-of-type(3) {
+    width: 30%; 
+
+    margin: 0 10%; 
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+
+}
+
+.main {
+
+    display: flex;
+    flex-wrap: wrap; 
+
+    justify-content: center; 
+    align-items: center; 
+}
+
+.guitar-image {
+
+
+    flex: 1; 
+
+    max-width: 30%; 
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+    
+    margin: 10px;
+    text-align: center; 
+}
+
+
+
+
+.guitar-image:nth-of-type(1) {
+
+    flex: 1 100%; 
+}
+
+.guitar-image:nth-of-type(2), .guitar-image:nth-of-type(3) {
+
+    flex: 1; 
+    
+}
+
+@media (max-width: 768px) {
+
+    .guitar-image {
+        flex: 1 100%; 
+
+
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .guitar-image:nth-of-type(2), .guitar-image:nth-of-type(3) {
+        width: 45%; 
+        margin: 0 5%;
+
+    }
+}
+
+@media (max-width: 480px) {
+
+    .guitar-image {
+
+        width: 100%; 
+    }
+
+    .guitar-image:nth-of-type(2), .guitar-image:nth-of-type(3) {
+
+        margin: 0;
+
+    }
+}
+
+
+.product-gallery {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.product-item {
+    flex: 1 1 30%; 
+
+    margin: 0 10px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.product-item img {
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-info {
+
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+
+
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-info {
+    transform: translateY(0);
+}
+
+
+
+
+.about-us {
+    display: flex;
+    justify-content: center;
+
+
+    align-items: center;
+    gap: 20px;
+}
+
+.about-flick img {
+    max-width: 350px;
+    height: auto;
+
+
+}
+
+
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
