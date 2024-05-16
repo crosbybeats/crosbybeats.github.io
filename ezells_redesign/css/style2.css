@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.nav {
+    height: 80px; /* Adjusted height */
+    background-color: #424242;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: auto;
+    height: 80px; /* Adjusted height */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 15px;
+    font-size: 23px;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #c0c0c0;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.about, .gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Adjust the height as needed */
+    height: 200px; /* Initial height */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Set to 100% to fill the container */
+    object-fit: cover;
+}
+
+.gallery-item .descripgallery {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .descripgallery {
+    opacity: 1;
+}
+.descripgallery-text {
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+    .gallery img {
+        width: 100%;
+    }
+}
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
