@@ -3,19 +3,16 @@
 }
 
 body{
+
     font-family: Arial, Helvetica, sans-serif;
     color: grey;
+
 }
 
-h1 {
-    font-size: 5vw;
-}
 
-h2 {
-    font-size: 2vw;
-}
 
 h3 {
+
     font-size: 1.5vw
 }
 p, a {
@@ -24,10 +21,12 @@ p, a {
 
 .nav {
     height: 120px;
+
     background-color: rgb(27, 27, 27);
     color: antiquewhite;
     display: flex;
     align-items: center;
+
     position: sticky;
     top: -50px;
 }
@@ -35,29 +34,40 @@ p, a {
 .nav-inner{
 
     float: left;
+
     width: 100%;
     position: sticky;
+
+
     top: 0;
     }
 
 
 .logo{
+
 float: left;
 width: 30%;
+
 padding-left: 40px;
+
     }
 
 nav {
     float: left;
     width: 70%;
+
     text-align: right;
     padding: 22px 40px;
 
 }
 
+
+
 .container {
+
     float: left;
     width: 100%;
+
     margin-bottom: 10px;
 
 }
@@ -66,40 +76,39 @@ nav {
 .header {
     background-color: darkgrey;
     color: whitesmoke;
+
+
     text-align: center;
+
     padding: 20px;
 
 }
 
 .left {
     float: left;
+
     width: 20%;
 
 }
 
-.side-nav a {
-    background-color: darkgray;
-    color: antiquewhite;
-    text-decoration: none;
-    display: block;
-    padding: 8px;
-    margin-top: 10px;
-    text-align: center;
-    width: 100%;
-}
+
 
 .main {
 float: left;
 width: 60%;
+
 padding: 0 20px;
 
 }
 
 .right {
+
     float: right;
     width: 20%;
+
     background-color: darkgoldenrod;
     color: antiquewhite;
+
     padding: 15px;
     margin-top: 10px;
 
@@ -111,16 +120,19 @@ padding: 0 20px;
     color: white;
     padding: 10px;
     clear: both;
+
     margin-top: 10px;
 }
 
 footer {
     width: 60%;
+
     margin: 0 auto;
     }
 
 @media (min-width: 621px) and (max-width: 1000px) {
     .main {
+
         width: 80%
     }
 
@@ -134,6 +146,7 @@ footer {
 
 @media only screen and (max-width:620px) {
     .left, .main, .right {
+        
         width: 100%;
     }
 }
