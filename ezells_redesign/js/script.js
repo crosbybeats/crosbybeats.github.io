@@ -1,12 +1,29 @@
-// Activate Carousel
+
 $("#myCarousel").carousel();
 
-// Enable Carousel Indicators
+
 $(".item").click(function(){
   $("#myCarousel").carousel(1);
 });
 
-// Enable Carousel Controls
+
 $(".left").click(function(){
+    
   $("#myCarousel").carousel("prev");
+});
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $(".fade-in").each(function() {
+
+
+            var elementBottom = $(this).offset().top + $(this).outerHeight();
+
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            if (windowBottom >= elementBottom) {
+                $(this).addClass("show");
+            }
+        });
+    }).scroll(); 
+
 });
