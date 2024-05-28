@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish a Demo</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .progress-bar-container:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        .progress-bar-container h2 {
+            color: #eee;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+        .progress-bar {
+            width: 800px;
+            height: 5px;
+            margin-top: 10px;
+            border: 1px solid #565656;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(245, 159, 0);
+        }
+
+        .percentage {
+            display: block;
+            height: 100%;
+            background-color: orange;
+            border-radius: 5px;
+            animation: progress 4000ms ease-in 1;
+        }
+
+        .c {
+            width: 85%;
+        }
+
+        .java {
+            width: 70%;
+        }
+
+        .python {
+            width: 55%;
+        }
+
+        .html {
+            width: 75%;
+        }
+
+        .css {
+            width: 65%;
+        }
+
+        .javascript {
+            width: 55%;
+        }
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+
+        li {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="skills">
+        <div class="progress-bar-container">
+            <h2>C/C++</h2>
+            <div class="progress-bar">
+                <span class="percentage c"></span>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <h2>Java</h2>
+            <div class="progress-bar">
+                <span class="percentage java"></span>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <h2>Python</h2>
+            <div class="progress-bar">
+                <span class="percentage python"></span>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <h2>HTML</h2>
+            <div class="progress-bar">
+                <span class="percentage html"></span>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <h2>CSS</h2>
+            <div class="progress-bar">
+                <span class="percentage css"></span>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <h2>JavaScript</h2>
+            <div class="progress-bar">
+                <span class="percentage javascript"></span>
+            </div>
+        </div>
+    </div>
+
+    <h1>How to make these epic progress bars:</h1>
+    <br>
+    <br>
+
+    <ul>
+        <li>1. Start by setting up your HTML structure with a !DOCTYPE html, html, head, and body tags</li>
+        <li>2. Inside the head tag, make sure to add a style tag to add your CSS
+        </li>
+        <li>3. Setup margins, paddings, and set box-sizing: border-box for all elements</li>
+        <li>4. Style the body to use flexbox for centering its content vertically and horizontally
+        </li>
+        <li>5. Create a class, in this case 'progress-bar-container', to contain each progress bar and its label</li>
+        <li>
+        6. Style the h2 elements within the progress-bar-container to define the font, color, spacing, or anything else that you want
+        </li>
+        <li>
+        7. Inside each progress-bar, use a span element with a class percentage to represent the filled portion of the bar
+        </li>
+        <li>
+          8. Style the 'percentage' class to set the background color/colors, border, and animation for the progress effect
+        </li>
+        <li>
+          9. Use the @keyframes tag to animate the width of the percentage elements from 0 to their defined widths over a specific amount of time
+        </li>
+    
+    </ul>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
