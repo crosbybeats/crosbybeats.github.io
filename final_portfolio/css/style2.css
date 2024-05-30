@@ -2,160 +2,119 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     color: #333;
-
 }
 
 hr {
-
     height: 1rem;
 }
 
 .nav {
-    height: 80px; 
-
+    height: 80px;
     background-color: rgb(228, 222, 215);
     color: rgb(190, 183, 167);
-
-
     display: flex;
-
     align-items: center;
     position: sticky;
     top: 0;
-
     z-index: 1000;
 }
 
 .nav-inner {
     width: 100%;
     display: flex;
-
     justify-content: space-between;
     padding: 0 40px;
 }
 
 .logo img {
     width: auto;
-
-    height: 80px; 
+    height: 80px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-
     padding: 20px 15px;
     font-size: 23px;
-
     margin-top: 20px;
     transition: color 0.3s;
 }
 
 nav a:hover {
-
-
     color: #c0c0c0;
 }
-
 
 .container {
     width: 100%;
     padding: 20px;
-
     margin-top: 20px;
 }
 
 .carousel {
     width: 100%;
-    max-width: 1200px; 
-
-
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-
     position: relative;
 }
 
 .carousel-inner {
     display: flex;
-
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
     flex: 0 0 100%;
-
     max-width: 100%;
 }
-
 
 .carousel-item img {
     width: 100%;
     height: auto;
 }
 
-
 .about, .gallery {
     text-align: center;
     padding: 20px;
-
 }
 
 .gallery {
     display: flex;
-
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-
 }
 
 .gallery-item {
-
     position: relative;
-
     width: calc(33.33% - 20px);
-
     margin: 10px;
     overflow: hidden;
-
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-   
-    height: 200px; 
+    height: 200px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%; 
-
+    height: 100%;
     object-fit: cover;
 }
 
 .gallery-item .descripgallery {
-
-
     position: absolute;
-
     bottom: 0;
-
     left: 0;
     width: 100%;
-    height: 50px; 
-
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-
-
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s;
@@ -163,46 +122,173 @@ nav a:hover {
 
 .gallery-item:hover .descripgallery {
     opacity: 1;
-
 }
-
 
 .descripgallery-text {
     font-size: 16px;
     color: #fff;
     padding: 10px;
-
     text-align: center;
 }
-
-
 
 .footer {
     background-color: black;
     color: whitesmoke;
     text-align: center;
     padding: 10px;
-
     position: relative;
     bottom: 0;
-
     width: 100%;
 }
 
 @media only screen and (max-width: 620px) {
     .gallery img {
-
         width: 100%;
     }
 }
 
-
 .fade-in {
     opacity: 0;
-    
     transition: opacity 0.5s ease-in-out;
 }
 
 .fade-in.show {
     opacity: 1;
+}
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.iframely-embed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: white;
+}
+
+#app {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding-bottom: 4vmin;
+    height: 90vh;
+    width: 100%;
+    background: #ede8e2;
+    color: #3a3535;
+}
+
+body {
+    display: grid;
+    padding: 3vmin;
+    background: #e6ded7;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+.title {
+    padding-left: 1em;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-family: "Prata", serif;
+    font-size: 8vw;
+    width: 100%;
+    z-index: 2;
+}
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes outer-left {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes inner-left {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+.cafe, .mozart {
+    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+[class*='inner'] {
+    outline: 1px solid blue;
+}
+
+.title-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.mozart-inner {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+    animation: outer-left 1s 1s ease both;
+}
+
+.cafe {
+    > .cafe-inner {
+        display: inline-block;
+    }
+}
+
+.mozart {
+    display: inline-block;
+}
+
+.image {
+    grid-row: 1;
+    grid-column: 3;
+    margin-left: -2rem;
+    opacity: 0.6;
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+
+@keyframes image-in {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+body:active * {
+    animation: none !important;
 }
