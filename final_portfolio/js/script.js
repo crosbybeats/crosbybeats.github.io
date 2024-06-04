@@ -1,37 +1,31 @@
-
-$("#myCarousel").carousel();
-
-
-$(".item").click(function(){
-  $("#myCarousel").carousel(1);
-});
-
-
-$(".left").click(function(){
-    
-  $("#myCarousel").carousel("prev");
-});
-
 $(document).ready(function() {
-    $(window).scroll(function() {
-        $(".fade-in").each(function() {
+  // Initialize carousel
+  $("#myCarousel").carousel();
 
-
-            var elementBottom = $(this).offset().top + $(this).outerHeight();
-
-            var windowBottom = $(window).scrollTop() + $(window).height();
-            if (windowBottom >= elementBottom) {
-                $(this).addClass("show");
-            }
-        });
-    }).scroll(); 
-
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const fadeInElements = document.querySelectorAll('.fade-in');
-  fadeInElements.forEach(element => {
-      element.classList.add('show');
+  // Click event for carousel items
+  $(".item").click(function(){
+    $("#myCarousel").carousel(1);
   });
-});
 
+  // Click event for carousel controls
+  $(".left").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+
+  // Scroll event for fade-in animations
+  $(window).scroll(function() {
+      $(".fade-in, .title, .image").each(function() {
+          var elementTop = $(this).offset().top;
+          var elementBottom = elementTop + $(this).outerHeight();
+          var windowTop = $(window).scrollTop();
+          var windowBottom = windowTop + $(window).height();
+
+          if (windowBottom > elementTop && windowTop < elementBottom) {
+              $(this).addClass("show");
+          }
+      });
+  });
+
+  // Trigger scroll event on page load
+  $(window).scroll();
+});

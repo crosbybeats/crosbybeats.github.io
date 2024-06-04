@@ -8,6 +8,288 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        hr {
+            height: 1rem;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: rgb(228, 222, 215);
+            color: rgb(190, 183, 167);
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .logo img {
+            width: auto;
+            height: 80px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 15px;
+            font-size: 23px;
+            margin-top: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c0c0c0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .carousel {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .about, .gallery {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 200px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item .descripgallery {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .descripgallery {
+            opacity: 1;
+        }
+
+        .descripgallery-text {
+            font-size: 16px;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 620px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+        }
+
+        .title, .image {
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .title.show, .image.show {
+            opacity: 1;
+            transform: none; /* Ensure the elements transform to their final position */
+        }
+
+        * {
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .iframely-embed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+            background: white;
+        }
+
+        #app {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            padding-bottom: 4vmin;
+            height: 90vh;
+            width: 100%;
+            background: #ede8e2;
+            color: #3a3535;
+        }
+
+        body {
+            display: grid;
+            padding: 3vmin;
+            background: #e6ded7;
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+        .title {
+            padding-left: 1em;
+            grid-column: 1 / -1;
+            grid-row: 1;
+            font-family: "Prata", serif;
+            font-size: 8vw;
+            width: 100%;
+            z-index: 2;
+        }
+
+        @keyframes text-clip {
+            from {
+                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            }
+            to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        @keyframes outer-left {
+            from {
+                transform: translateX(50%);
+            }
+            to {
+                transform: none;
+            }
+        }
+
+        @keyframes inner-left {
+            from {
+                transform: translateX(-50%);
+            }
+            to {
+                transform: none;
+            }
+        }
+
+        .cafe, .mozart {
+            animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+        }
+
+        .title-inner {
+            display: inline-block;
+            animation: inner-left 1s 1s ease both;
+        }
+
+        .cafe-inner {
+            display: inline-block;
+            animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+        }
+
+        .mozart-inner {
+            animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+        }
+
+        .title {
+            animation: outer-left 1s 1s ease both;
+        }
+
+        .cafe {
+            > .cafe-inner {
+                display: inline-block;
+            }
+        }
+
+        .mozart {
+            display: inline-block;
+        }
+
+        .image {
+            grid-row: 1;
+            grid-column: 2;
+            justify-self: right;
+            height: 100%;
+            padding-right: 4vmin;
+            z-index: 1;
+            animation: outer-left 1s 1s ease both;
+        }
+    </style>
 </head>
 <body>
     <div class="nav">
@@ -17,12 +299,12 @@
                 <p style="font-size: 50px; font-weight: bolder;">Oliver Crosby</p>
             </div>
             <nav style="padding-top: 20px;">
-                <a href="index.html">Home</a>
-                <a href="#">About</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Current Works</a>
-                <a href="#">Collaborations</a>
-                <a href="#">Contact</a>
+                <a href="index2.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="current.html">Current Works</a>
+                <a href="collabs.html">Collaborations</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </div>
@@ -91,8 +373,8 @@
             </div>
         </div>
         <div class="gallery-item">
-            <a href="">
-                <img src="images/notyetnotyet" alt="cheap luv photo">
+            <a href="https://open.spotify.com/track/3qzHtOgZy3OCIMIXsZAiL0?si=c111b8ca036a42fa">
+                <img src="images/cheap_love_cover.jpg" alt="cheap luv photo">
             </a>
             <div class="descripgallery">
                 <p class="descripgallery-text">Cheap Love</p>
@@ -102,6 +384,38 @@
     <div class="footer">
         <footer>2024 Oliver Crosby</footer>
     </div>
-    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize carousel
+            $("#myCarousel").carousel();
+
+            // Click event for carousel items
+            $(".item").click(function(){
+              $("#myCarousel").carousel(1);
+            });
+
+            // Click event for carousel controls
+            $(".left").click(function(){
+              $("#myCarousel").carousel("prev");
+            });
+
+            // Scroll event for fade-in animations
+            $(window).scroll(function() {
+                $(".fade-in, .title, .image").each(function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var windowTop = $(window).scrollTop();
+                    var windowBottom = windowTop + $(window).height();
+
+                    if (windowBottom > elementTop && windowTop < elementBottom) {
+                        $(this).addClass("show");
+                    }
+                });
+            });
+
+            // Trigger scroll event on page load
+            $(window).scroll();
+        });
+    </script>
 </body>
 </html>
