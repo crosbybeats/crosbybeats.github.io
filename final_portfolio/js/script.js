@@ -1,18 +1,17 @@
 $(document).ready(function() {
-  // Initialize carousel
+
   $("#myCarousel").carousel();
 
-  // Click event for carousel items
   $(".item").click(function(){
     $("#myCarousel").carousel(1);
   });
 
-  // Click event for carousel controls
+
   $(".left").click(function(){
     $("#myCarousel").carousel("prev");
   });
 
-  // Scroll event for fade-in animations
+
   $(window).scroll(function() {
       $(".fade-in, .title, .image").each(function() {
           var elementTop = $(this).offset().top;
@@ -26,6 +25,24 @@ $(document).ready(function() {
       });
   });
 
-  // Trigger scroll event on page load
+
+
   $(window).scroll();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.fade-in');
+
+  function checkVisibility() {
+      elements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= window.innerHeight) {
+              element.classList.add('show');
+          }
+      });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('resize', checkVisibility);
+  checkVisibility();
 });

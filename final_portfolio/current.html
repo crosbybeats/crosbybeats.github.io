@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Works</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+   <style>
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body style="background-color: rgb(255, 247, 236);">
+
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="logo">
+            
+                <p style="font-size: 40px; font-weight: bolder;">Oliver Crosby</p>
+            </div>
+            <nav style="padding-top: 20px;">
+                <a href="index2.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="current.html">Current Works</a>
+                <a href="collabs.html">Collaborations</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main">
+       
+        <h1 style="text-align: center; text-decoration: underline;">Current Projects</h1>
+<br>
+
+    </div>
+
+    <div class="container">
+        <div class="fade-in">
+            <h2>Bass Guitar</h2>
+            <img src="images/bassgtrcustom.jpeg" style="width: 500px";>
+            <p style="margin: 0% 60% 20% 0%; text-align: left; font-style: italic;">My recent custom bass guitar project - spray painted and sanded by hand</p>
+        </div>
+        <br>
+
+        <div class="fade-in" style="float: right;">
+            <h2>My Studio</h2>
+            <img src="images/studio.jpeg" alt="Studio Photo" style="width: 700px;">
+            <p style="margin: 0% 20%;  font-style: italic;">My ever evolving studio that blends vintage music technology with modern production</p>
+        </div>
+        <br>
+
+
+        <div class="fade-in" style="margin-top: 600px;">
+            <h2>Mixing Board Project</h2>
+            <img src="images/mixer.jpeg" alt="Mixer" style="width: 500px";>
+            <p style="margin: 0% 60% 20% 0%; text-align: left; font-style: italic;">A Toft ATB 32 analog mixing console that was gifted to me which I am trying to restore and integrate into my studio</p>
+        </div>
+        
+        <br>
+        <br>
+
+        <div class="fade-in">
+            <h2>SoundCloud Demos</h2>
+            <br>
+           
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1844588295%3Fsecret_token%3Ds-VsoKu0Y8byS&color=%23c09f75&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/oliver-crosby-864388867" title="Oliver Crosby" target="_blank" style="color: #cccccc; text-decoration: none;">Oliver Crosby</a> · <a href="https://soundcloud.com/oliver-crosby-864388867/hotel-clara-mix-v3-master-v1/s-VsoKu0Y8byS" title="Hotel Clara Mix V3 Master V1" target="_blank" style="color: #cccccc; text-decoration: none;">Hotel Clara Mix V3 Master V1</a></div>
+
+            <br>
+            <br>
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1742347467&color=%23c09f75&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/oliver-crosby-864388867" title="Oliver Crosby" target="_blank" style="color: #cccccc; text-decoration: none;">Oliver Crosby</a> · <a href="https://soundcloud.com/oliver-crosby-864388867/16-bit" title="16 bit" target="_blank" style="color: #cccccc; text-decoration: none;">16 bit</a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>2024 Oliver Crosby</footer>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        
+
+          
+            $(window).scroll(function() {
+                $(".fade-in, .title, .image").each(function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var windowTop = $(window).scrollTop();
+                    var windowBottom = windowTop + $(window).height();
+
+                    if (windowBottom > elementTop && windowTop < elementBottom) {
+                        $(this).addClass("show");
+                    }
+                });
+            });
+
+         
+            $(window).scroll();
+        });
+    </script>
+</body>
+</html>

@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     <style>
         * {
             box-sizing: border-box;
@@ -18,6 +23,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: #333;
+            background-color: rgb(255, 247, 236);
         }
 
         hr {
@@ -41,6 +47,7 @@
             justify-content: space-between;
             padding: 0 40px;
         }
+        
 
         .logo img {
             width: auto;
@@ -160,7 +167,7 @@
 
         .fade-in {
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 2s ease-in-out;
         }
 
         .fade-in.show {
@@ -170,55 +177,17 @@
         .title, .image {
             opacity: 0;
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateX(100%);
         }
 
-        .title.show, .image.show {
+        .title.show {
             opacity: 1;
-            transform: none; /* Ensure the elements transform to their final position */
+            transform: translateX(0);
         }
 
-        * {
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        .iframely-embed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 50;
-            background: white;
-        }
-
-        #app {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            align-items: center;
-            padding-bottom: 4vmin;
-            height: 90vh;
-            width: 100%;
-            background: #ede8e2;
-            color: #3a3535;
-        }
-
-        body {
-            display: grid;
-            padding: 3vmin;
-            background: #e6ded7;
-        }
-
-        @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
-
-        .title {
-            padding-left: 1em;
-            grid-column: 1 / -1;
-            grid-row: 1;
-            font-family: "Prata", serif;
-            font-size: 8vw;
-            width: 100%;
-            z-index: 2;
+        .image.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         @keyframes text-clip {
@@ -289,14 +258,65 @@
             z-index: 1;
             animation: outer-left 1s 1s ease both;
         }
+
+        .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
     </style>
 </head>
 <body>
     <div class="nav">
         <div class="nav-inner">
             <div class="logo">
-                <!-- <img src="images/logo.png" alt="Oliver's logo"> -->
-                <p style="font-size: 50px; font-weight: bolder;">Oliver Crosby</p>
+
+                <p style="font-size: 40px; font-weight: bolder;">Oliver Crosby</p>
             </div>
             <nav style="padding-top: 20px;">
                 <a href="index2.html">Home</a>
@@ -309,21 +329,7 @@
         </div>
     </div>
     <img style="width: 99vw;" src="images/brooklyn3me.JPG" alt="brooklyn">
-    <div id="app">
-        <div class="title">
-            <div class="title-inner">
-                <div class="cafe">
-                    <div class="cafe-inner">Oliver</div>
-                </div>
-                <div class="mozart">
-                    <div class="mozart-inner">Crosby</div>
-                </div>
-            </div>
-        </div>
-        <div class="image">
-            <img style="max-width: 354px;" src='images/brooklyn4me.JPG' alt='mememe'>
-        </div>
-    </div>
+   
    
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -351,9 +357,12 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="about">
-        <h2 class="fade-in" style="font-size: 40px; font-style: italic;">Oliver's Recent Projects</h2>
-        <p style="margin: 0% 20%; font-size: 20px;">I make songs here they are</p>
+    <div class="about" class="fade-in">
+        <h2  style="font-size: 45px; font-style: italic;">Recent Projects</h2>
+        <br>
+        <p  style="margin: 0% 20%; font-size: 15px;">Locana - Oliver Crosby</p>
+        <br>
+        <p  style="margin: 0% 20%; font-size: 15px;">Night Before and Cheap Love - Cherry Ferrari</p>
     </div>
     <div class="gallery">
         <div class="gallery-item">
@@ -381,41 +390,80 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <footer>2024 Oliver Crosby</footer>
-    </div>
+
+    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246; width: 99vw;">
+        <div class="container" style="height: 30px;">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+                <p class="rights"><span>©  </span><span class="copyright-year">2024</span><span> </span><span>Crosby</span><span> - </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:ocrosby@eastsideprep.org">ocrosby@eastsideprep.org</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phone:</dt>
+                <dd><a href="tel:4255552222">425 555 2222</a> 
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-9 col-xl-1">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="about.html">About</a></li>
+                <li><a href="current.html">Projects</a></li>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collabs.html">Collaborations</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="https://www.instagram.com/oliver_crosby/"><span class="icon mdi mdi-instagram"></span><span>Instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.youtube.com/channel/UC4gtrUmaWJ7Rv_7cCaJHY6Q"><span class="icon mdi mdi-youtube-play"></span><span>Youtube</span></a></div>
+        </div>
+      </footer>
     <script>
-        $(document).ready(function() {
-            // Initialize carousel
-            $("#myCarousel").carousel();
+       $(document).ready(function() {
+   
 
-            // Click event for carousel items
-            $(".item").click(function(){
-              $("#myCarousel").carousel(1);
-            });
+    $("#myCarousel").carousel();
 
-            // Click event for carousel controls
-            $(".left").click(function(){
-              $("#myCarousel").carousel("prev");
-            });
+ 
+    $(".item").click(function() {
+        $("#myCarousel").carousel(1);
+    });
 
-            // Scroll event for fade-in animations
-            $(window).scroll(function() {
-                $(".fade-in, .title, .image").each(function() {
-                    var elementTop = $(this).offset().top;
-                    var elementBottom = elementTop + $(this).outerHeight();
-                    var windowTop = $(window).scrollTop();
-                    var windowBottom = windowTop + $(window).height();
 
-                    if (windowBottom > elementTop && windowTop < elementBottom) {
-                        $(this).addClass("show");
-                    }
-                });
-            });
+    $(".left").click(function() {
+        $("#myCarousel").carousel("prev");
+    });
 
-            // Trigger scroll event on page load
-            $(window).scroll();
+
+    $(window).scroll(function() {
+        $(".fade-in").each(function() {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var windowTop = $(window).scrollTop();
+            var windowBottom = windowTop + $(window).height();
+
+            if (windowBottom > elementTop && windowTop < elementBottom) {
+                $(this).addClass("show");
+            }
         });
+    });
+
+
+    $(window).scroll();
+});
+
+
     </script>
 </body>
 </html>

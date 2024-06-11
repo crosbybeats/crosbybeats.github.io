@@ -15,9 +15,12 @@ hr {
 
 .nav {
     height: 80px;
+    width: 99vw;
     background-color: rgb(228, 222, 215);
     color: rgb(190, 183, 167);
     display: flex;
+
+
     align-items: center;
     position: sticky;
     top: 0;
@@ -26,6 +29,7 @@ hr {
 
 .nav-inner {
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
@@ -41,6 +45,7 @@ nav a {
     text-decoration: none;
     padding: 20px 15px;
     font-size: 23px;
+
     margin-top: 20px;
     transition: color 0.3s;
 }
@@ -55,11 +60,18 @@ nav a:hover {
     margin-top: 20px;
 }
 
+
+
+
+
+
 .carousel {
     width: 100%;
+
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+
     position: relative;
 }
 
@@ -87,6 +99,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+
     margin-top: 20px;
 }
 
@@ -94,6 +108,8 @@ nav a:hover {
     position: relative;
     width: calc(33.33% - 20px);
     margin: 10px;
+
+
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -101,6 +117,9 @@ nav a:hover {
 }
 
 .gallery-item img {
+
+
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -109,6 +128,7 @@ nav a:hover {
 .gallery-item .descripgallery {
     position: absolute;
     bottom: 0;
+
     left: 0;
     width: 100%;
     height: 50px;
@@ -116,6 +136,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -128,18 +149,12 @@ nav a:hover {
     font-size: 16px;
     color: #fff;
     padding: 10px;
+
+
     text-align: center;
 }
 
-.footer {
-    background-color: black;
-    color: whitesmoke;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+
 
 @media only screen and (max-width: 620px) {
     .gallery img {
@@ -147,17 +162,11 @@ nav a:hover {
     }
 }
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
 
-.fade-in.show {
-    opacity: 1;
-}
 
 .title, .image {
     opacity: 0;
+
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     transform: translateX(100%);
 }
@@ -174,7 +183,7 @@ nav a:hover {
 
 .title, .image {
     opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 5s ease-in-out, transform 5s ease-in-out;
     transform: translateX(100%);
 }
 
@@ -187,6 +196,10 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
 
 * {
     position: relative;
@@ -195,6 +208,7 @@ nav a:hover {
 
 .iframely-embed {
     position: fixed;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -214,6 +228,17 @@ nav a:hover {
     color: #3a3535;
 }
 
+.fade-in {
+    opacity: 0;
+
+    transition: opacity 2s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+
 .body {
     display: grid;
     padding: 3vmin;
@@ -225,10 +250,14 @@ nav a:hover {
 .title {
     padding-left: 1em;
     grid-column: 1 / -1;
+
+
     grid-row: 1;
     font-family: "Prata", serif;
     font-size: 8vw;
     width: 100%;
+
+
     z-index: 2;
     transform: translateX(100%);
 }
@@ -242,6 +271,8 @@ nav a:hover {
     grid-column: 2;
     justify-self: right;
     height: 100%;
+
+
     padding-right: 4vmin;
     z-index: 1;
     transform: translateY(-100%);
@@ -252,3 +283,178 @@ nav a:hover {
 }
 
 
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+:root {
+  --form-bg: #f8f4e5;
+
+  --form-border: #d9b49f;
+  --form-shadow: #dfae4b;
+  --form-focus: #6bd4b1;
+
+
+  --font-size: 12pt;
+
+  --font-color: #2A293E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  display: grid;
+  align-items: center;
+
+  justify-items: center;
+ 
+}
+
+.contact-us {
+  background: var(--form-bg);
+  padding: 50px 100px;
+  border-top: 10px solid var(--form-border);
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+
+
+  font-size: var(--font-size);
+  line-height: calc(var(--font-size) * 2);
+  font-family: var(--font-face);
+}
+
+input {
+  margin-bottom: calc(var(--font-size) * 2);
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: calc(var(--font-size) * 2);
+  font-style: italic;
+
+
+  margin: 0 0 0.5em 0;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: var(--form-border);
+  font-weight: bold;
+}
+
+input, textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: var(--form-bg);
+
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid var(--form-focus);
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: calc(var(--font-size) * 2);
+  padding: 0 20px;
+  border: none;
+  background: var(--form-border);
+  color: white;
+
+
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+button:hover {
+
+  background: inherit;
+  color: var(--form-border);
+  border-bottom: 2px solid var(--form-border);
+}
+
+::selection {
+  background: rgb(255, 199, 184);
+}
+
+
+
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+
+  border: 1px solid var(--form-focus);
+  -webkit-text-fill-color: var(--font-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--form-bg) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+.songgallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.song {
+    background-color: #fff;
+    border-radius: 5px;
+
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.song img {
+    width: 100%;
+    height: auto;
+
+
+    display: block;
+}
+
+.song h3 {
+    margin: 10px;
+    
+    font-size: 18px;
+    text-align: center;
+}
+
+.song a {
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.song a:hover {
+    transform: translateY(-5px);
+}

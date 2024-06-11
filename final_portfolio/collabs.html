@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+   <style>
+
+
+        .main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img.profile-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin: 20px 0 10px;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+
+        img.profile-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body style="background-color: rgb(255, 247, 236);">
+
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="logo">
+            
+                <p style="font-size: 40px; font-weight: bolder;">Oliver Crosby</p>
+            </div>
+            <nav style="padding-top: 20px;">
+                <a href="index2.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="current.html">Current Works</a>
+                <a href="collabs.html">Collaborations</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main">
+        <img src="images/brooklyn2.JPG" alt="collab cherry" class="profile-image">
+        <div class="content">
+            <h1 style="letter-spacing: 1px; text-decoration: underline;">My Collaborations</h1>
+            <p>Collaborating is one of the most important ideas in music and the creative process as a whole. My primary collaboration currently is my band project Cherry Ferrari which is a duo project between myself and Emma Wang. We work together to write songs that wouldn't exist if it werent for each of our own creative ideas, culminating in new fresh sounds.</p>
+            <br>
+            <p class="fade-in">I have also collaborated with many other artists around the work on my jazz projects, especially on my Locana project, which featured artists from California, New York, Japan, UK, Canada, and more. </p>
+            <br>
+            <p class="fade-in">If you are interested in collaborating with me, please go to the <a href="contact.html">contact</a> page and send me a message. Thank you! </p>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>2024 Oliver Crosby</footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+           
+
+           
+            $(window).scroll(function() {
+                $(".fade-in, .title, .image").each(function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var windowTop = $(window).scrollTop();
+                    var windowBottom = windowTop + $(window).height();
+
+                    if (windowBottom > elementTop && windowTop < elementBottom) {
+                        $(this).addClass("show");
+                    }
+                });
+            });
+
+           
+            $(window).scroll();
+        });
+    </script>
+</body>
+</html>

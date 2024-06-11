@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: gray;
+            font-size: 48px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(255, 247, 236);">
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="logo">
+                <p style="font-size: 40px; font-weight: bolder;">Oliver Crosby</p>
+            </div>
+            <nav style="padding-top: 20px;">
+                <a href="index2.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="current.html">Current Works</a>
+                <a href="collabs.html">Collaborations</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="contact-us">
+        <form action="#">
+            <label for="customerName">NAME <em>&#x2a;</em></label>
+            <input type="text" id="customerName" name="customerName" required>
+            
+            <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+            
+            <label for="customerPhone">PHONE</label>
+            <input type="tel" id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      
+            <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
+            <textarea rows="4" id="customerNote" name="customerNote" required></textarea>
+            
+            <label for="spamProtection">SPAM PROTECTION <em>&#x2a;</em> <span>&nbsp;&nbsp;&nbsp;&nbsp;What city is Oliver from?</span></label>
+            <input type="text" id="spamProtection" name="spamProtection">
+            
+            <button id="customerOrder">SUBMIT</button>
+        </form>
+    </div>
+
+    <br><br>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/oliver_crosby/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://open.spotify.com/artist/3JlivF1eIeK1qIg6BdFdNO" target="_blank" class="fa fa-spotify"></a>
+        <a href="mailto:ocrosby@eastsideprep.org" class="fa fa-envelope"></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="footer">
+    <footer>2024 Oliver Crosby</footer>
+</div>
+</body>
+</html>

@@ -43,13 +43,13 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgb(255, 247, 236);">
 
     <div class="nav">
         <div class="nav-inner">
             <div class="logo">
-                <!-- <img src="images/logo.png" alt="Oliver's logo"> -->
-                <p style="font-size: 50px; font-weight: bolder;">Oliver Crosby</p>
+            
+                <p style="font-size: 40px; font-weight: bolder;">Oliver Crosby</p>
             </div>
             <nav style="padding-top: 20px;">
                 <a href="index2.html">Home</a>
@@ -63,13 +63,41 @@
     </div>
 
     <div class="main">
-        <img src="images/fatburrito.jpg" alt="about me flick" class="profile-image">
+        <img src="images/foggybehind.png" alt="about me flick" class="profile-image">
         <div class="content">
-            <h1>About Me</h1>
-            <p>Im a musician - i will expand on this haha</p>
+            <h1 style="letter-spacing: 1px; text-decoration: underline;">About Me</h1>
+            <p>Oliver Crosby is a musician and producer from Seattle, WA who blends the genres of electronic music, jazz, and hip hop into a fluid and captivating sound. With an instrumental background in jazz piano, electric bass, and drums, he combines his favorite instruments and sounds into soulful creations. Inspired by the ever changing scene of modern jazz, he continually varies his ideas and sonic touch to keep his music fresh and progressive.</p>
+            <br>
+            <p class="fade-in">He is also one half of the band Cherry Ferrari, a duo who creates songs combining funk, house, jazz, disco, and electronic music. Starting as a band in 2022, Cherry Ferrari has gone on to play shows across Seattle, opening for artists like Macklemore, Thundercat, and Lil Yachty. This summer they will be embarking on their first tour, playing shows in New York, Chicago, and Los Angeles.</p>
         </div>
+    </div>
+    <div class="footer">
+        <footer>2024 Oliver Crosby</footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+         
+
+
+         
+            $(window).scroll(function() {
+                $(".fade-in, .title, .image").each(function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var windowTop = $(window).scrollTop();
+                    var windowBottom = windowTop + $(window).height();
+
+                    if (windowBottom > elementTop && windowTop < elementBottom) {
+                        $(this).addClass("show");
+                    }
+                });
+            });
+
+           
+            $(window).scroll();
+        });
+    </script>
 </body>
 </html>
